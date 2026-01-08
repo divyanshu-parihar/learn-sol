@@ -1,0 +1,16 @@
+[package]
+name = "native_hello_world"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+solana-program = "=1.18.0"
+borsh = "1.2.1"
+borsh-derive = "1.2.1"
+# Pins to ensure compatibility with Solana 1.18 toolchain
+ahash = "=0.8.11"
+hashbrown = "=0.14.3"
+indexmap = "=2.2.6"
+
+[lib]
+crate-type = ["cdylib", "lib"]

@@ -1,0 +1,27 @@
+[package]
+name = "anchor_voting"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "anchor_voting"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+
+[dependencies]
+anchor-lang = "0.31.1"
+# Pins for Solana 1.18 toolchain compatibility
+ahash = "=0.8.11"
+hashbrown = "=0.14.3"
+indexmap = "=2.2.6"
+# Force older zmij to avoid unstable feature usage in IDL gen
+zmij = "=1.0.0"
